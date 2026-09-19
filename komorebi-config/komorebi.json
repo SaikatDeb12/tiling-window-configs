@@ -8,8 +8,8 @@
     "border": true,
     "border_implementation": "Windows",
     "border_style": "System",
-    "border_width": 0,
-    "border_offset": 0,
+    "border_width": 4,
+    "border_offset": 2,
     "border_colours": {
         "single": "#89b4fa",
         "stack": "#00ff99",
@@ -18,11 +18,11 @@
         "unfocused": "#303030"
     },
     "mouse_follows_focus": true,
-    "transparency": true,
+    "transparency": false,
     "transparency_alpha": 220,
     "theme": {
         "palette": "Base16",
-        "name": "Ashes",
+        "name": "3024",
         "unfocused_border": "Base03",
         "bar_accent": "Base0C"
     },

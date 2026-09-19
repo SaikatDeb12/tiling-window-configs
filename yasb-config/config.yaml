@@ -18,16 +18,16 @@ bars:
             round_corners: true
             border_color: None
         window_flags:
-            always_on_top: false
+            always_on_top: true
             windows_app_bar: false
         dimensions:
             width: "100%"
-            height: 28
+            height: 24
         padding:
-            top: 0
-            left: 0
-            bottom: 4
-            right: 0
+            top: 2
+            left: 2
+            bottom: 2
+            right: 2
         widgets:
             left: ["home", "komorebi_workspaces", "active_window"]
             center: ["clock", "apps"]
@@ -40,6 +40,7 @@ bars:
                     "memory",
                     "wifi",
                     "volume",
+                    "battery",
                     "power_menu",
                 ]
 widgets:
@@ -171,7 +172,7 @@ widgets:
     home:
         type: "yasb.home.HomeWidget"
         options:
-            label: "<span>\uf192</span>"
+            label: "<span>\udb81\udf17</span>"
             menu_list:
                 - { title: "User Home", path: "~" }
                 - { title: "Download", path: "~\\Downloads" }
@@ -322,7 +323,7 @@ widgets:
                 enabled: true
                 blur: true
                 image_width: 296
-                image_per_page: 6
+                image_per_page: 4
                 show_buttons: false
                 orientation: "portrait"
                 image_spacing: 10
@@ -346,3 +347,28 @@ widgets:
             bar_type: "bars"
             framerate: 60
             hide_empty: true
+    battery:
+        type: "yasb.battery.BatteryWidget"
+        options:
+            label: "<span>{icon}</span> {percent}%"
+            label_alt: "<span>{icon}</span> {percent}% | {power}W | {time_remaining}"
+            update_interval: 5000
+            time_remaining_natural: False
+            hide_unsupported: True
+            charging_options:
+                icon_format: "{charging_icon}"
+                blink_charging_icon: true
+                blink_interval: 500
+            status_thresholds:
+                critical: 10
+                low: 25
+                medium: 75
+                high: 95
+                full: 100
+            status_icons:
+                icon_charging: "\uf0e7"
+                icon_critical: "\uf244"
+                icon_low: "\uf243"
+                icon_medium: "\uf242"
+                icon_high: "\uf241"
+                icon_full: "\uf240"
