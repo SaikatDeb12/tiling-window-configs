@@ -22,12 +22,12 @@ bars:
         blur_effect:
             enabled: false
             round_corners: true
-        window_flags:
-            always_on_top: false
-            windows_app_bar: true
+        window_flags: # imp configs
+            always_on_top: true
+            windows_app_bar: false
         dimensions:
             width: 100%
-            height: 35
+            height: 25
         padding:
             top: 0
             left: 0
@@ -75,7 +75,7 @@ widgets:
                 - title: Pictures
                   path: ~\Pictures
                 - title: Wallpapers
-                  path: D:\OneDrive\Pictures\Wallpapers\Themes
+                  path: C:\Users\saika\Downloads\wallpapers\images
             system_menu: true
             power_menu: false
             blur: false
@@ -307,7 +307,7 @@ widgets:
             label: "<span>\udb83\udc8d</span>"
             change_automatically: false
             # Example path to folder with images. Can be a single string or a list of strings.
-            image_path: "D:\\OneDrive\\Pictures\\Wallpapers\\Themes\\Monochrome"
+            image_path: "C://Users//saika//Downloads//wallpapers//images"
             engine:
                 enabled: true
                 animation: "slide_top" # circle/slide_top/diamond/split
