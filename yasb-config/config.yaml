@@ -31,11 +31,10 @@ bars:
         widgets:
             left: ["home", "komorebi_workspaces", "active_window"]
             center: ["clock", "apps"]
-            right:
-                [
+            right: [
                     "cava",
                     "media",
-                    "weather",
+                    # 'weather',
                     "wallpapers",
                     "memory",
                     "wifi",
